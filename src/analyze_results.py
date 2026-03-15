@@ -116,6 +116,17 @@ def main() -> None:
         )
     pd.DataFrame(human_rows).sort_values("time_bin").to_csv(RESULTS_DIR / "tables" / "human_by_time_bin.csv", index=False)
 
+    human_by_context = (
+        merged.groupby("base_context", as_index=False)
+        .agg(
+            items=("item_instance_id", "nunique"),
+            mean_human_accuracy=("human_accuracy", "mean"),
+            median_human_seconds=("human_median_seconds_all_valid", "median"),
+        )
+        .sort_values("base_context")
+    )
+    human_by_context.to_csv(RESULTS_DIR / "tables" / "human_by_base_context.csv", index=False)
+
 
 if __name__ == "__main__":
     main()

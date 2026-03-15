@@ -1,0 +1,5 @@
+base_context,items,mean_human_accuracy,median_human_seconds
+hide_the_item,12,0.8051,34.761707
+object_drop,12,0.9833333333333334,23.7454
+ouch_that_hurt,12,0.8773249999999999,25.276125
+unexpected_contents,12,0.9136583333333334,25.886305

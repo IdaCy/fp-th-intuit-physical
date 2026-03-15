@@ -1,0 +1,10 @@
+.env
+private/
+.venv/
+__pycache__/
+.pytest_cache/
+.DS_Store
+
+data/raw/
+data/external/
+results/model_outputs/raw/

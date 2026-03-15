@@ -1,7 +1,0 @@
-README.md
-pyproject.toml
-src/fp_th_intuit_physical.egg-info/PKG-INFO
-src/fp_th_intuit_physical.egg-info/SOURCES.txt
-src/fp_th_intuit_physical.egg-info/dependency_links.txt
-src/fp_th_intuit_physical.egg-info/requires.txt
-src/fp_th_intuit_physical.egg-info/top_level.txt

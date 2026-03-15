@@ -17,6 +17,19 @@ from src.utils import CONFIGS_DIR, INTERIM_DIR, REPORTS_DIR, RESULTS_DIR, ensure
 MODEL_PRICING_PER_1M = {
     "gpt-5-mini": {"input": 0.25, "output": 2.0},
     "gpt-5.4": {"input": 10.0, "output": 30.0},
+    "gpt-4.1": {"input": 2.0, "output": 8.0},
+}
+
+MODEL_REASONING = {
+    "gpt-5-mini": "minimal",
+    "gpt-5.4": "none",
+    "gpt-4.1": None,
+}
+
+MODEL_VERBOSITY = {
+    "gpt-5-mini": "low",
+    "gpt-5.4": "low",
+    "gpt-4.1": "medium",
 }
 
 
@@ -51,15 +64,22 @@ def append_actual_cost(model: str, input_tokens: int, output_tokens: int) -> Non
         handle.write(f"  actual cost: ${actual_cost:.4f}\n")
 
 
-def call_model(client: OpenAI, model: str, user_prompt: str, temperature: float, max_output_tokens: int):
-    response = client.responses.create(
-        model=model,
-        input=[
+def call_model(client: OpenAI, model: str, user_prompt: str, max_output_tokens: int):
+    request = {
+        "model": model,
+        "input": [
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user", "content": user_prompt},
         ],
-        temperature=temperature,
-        max_output_tokens=max_output_tokens,
+        "text": {"verbosity": MODEL_VERBOSITY.get(model, "low")},
+        "max_output_tokens": max_output_tokens,
+    }
+    reasoning_effort = MODEL_REASONING.get(model)
+    if reasoning_effort is not None:
+        request["reasoning"] = {"effort": reasoning_effort}
+
+    response = client.responses.create(
+        **request
     )
     usage = getattr(response, "usage", None)
     input_tokens = getattr(usage, "input_tokens", 0) if usage else 0
@@ -85,9 +105,10 @@ def run_eval(model: str, limit: int | None = None) -> pd.DataFrame:
     existing_rows: list[dict[str, object]]
     if output_path.exists():
         existing = pd.read_csv(output_path)
-        done_ids = set(existing["item_instance_id"])
+        successful = existing[existing["parsed_prediction"].notna()].copy()
+        done_ids = set(successful["item_instance_id"])
         prepared = prepared[~prepared["item_instance_id"].isin(done_ids)].copy()
-        existing_rows = existing.to_dict("records")
+        existing_rows = successful.to_dict("records")
     else:
         existing_rows = []
 
@@ -96,7 +117,7 @@ def run_eval(model: str, limit: int | None = None) -> pd.DataFrame:
     new_rows: list[dict[str, object]] = []
     for _, row in prepared.iterrows():
         prompt = build_user_prompt(row["vignette"])
-        raw_output, input_tokens, output_tokens = call_model(client, model, prompt, config["temperature"], config["max_output_tokens"])
+        raw_output, input_tokens, output_tokens = call_model(client, model, prompt, config["max_output_tokens"])
         total_input_tokens += input_tokens
         total_output_tokens += output_tokens
         parsed = parse_answer(raw_output)
@@ -105,7 +126,6 @@ def run_eval(model: str, limit: int | None = None) -> pd.DataFrame:
                 client,
                 model,
                 f"{prompt}\n\nReturn exactly one character: 1, 2, 3, or 4.",
-                config["temperature"],
                 config["max_output_tokens"],
             )
             total_input_tokens += retry_input_tokens

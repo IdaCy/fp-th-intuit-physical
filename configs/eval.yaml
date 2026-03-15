@@ -1,4 +1,4 @@
 temperature: 0.0
-max_output_tokens: 8
+max_output_tokens: 32
 seed: 17
 time_bin_count: 4

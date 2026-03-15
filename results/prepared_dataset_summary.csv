@@ -1,0 +1,13 @@
+base_context,inference_level,item_instances,templates
+hide_the_item,0,4,2
+hide_the_item,2,4,2
+hide_the_item,3,4,2
+object_drop,0,4,2
+object_drop,2,4,2
+object_drop,3,4,2
+ouch_that_hurt,0,4,2
+ouch_that_hurt,2,4,2
+ouch_that_hurt,3,4,2
+unexpected_contents,0,4,2
+unexpected_contents,2,4,2
+unexpected_contents,3,4,2

@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: fp-th-intuit-physical
+Version: 0.1.0
+Summary: Forward-pass evaluation on the INTUIT physical-only benchmark
+Requires-Python: >=3.11
+Requires-Dist: matplotlib>=3.9
+Requires-Dist: numpy>=2.1
+Requires-Dist: openai>=1.68.2
+Requires-Dist: pandas>=2.2
+Requires-Dist: pyyaml>=6.0.2
+Requires-Dist: python-dotenv>=1.0.1
+Requires-Dist: scipy>=1.14
+Requires-Dist: seaborn>=0.13
+Requires-Dist: statsmodels>=0.14.4

@@ -12,7 +12,7 @@ def main() -> None:
     sns.set_theme(style="whitegrid")
 
     item_level = pd.read_csv(RESULTS_DIR / "tables" / "item_level_results.csv")
-    by_time = pd.read_csv(RESULTS_DIR / "tables" / "accuracy_by_time_bin.csv")
+    by_time = pd.read_csv(RESULTS_DIR / "tables" / "accuracy_by_time_bin_by_condition.csv")
 
     plt.figure(figsize=(8, 5))
     sns.histplot(item_level[["item_instance_id", "human_median_seconds_all_valid"]].drop_duplicates(), x="human_median_seconds_all_valid", bins=12)
@@ -23,7 +23,8 @@ def main() -> None:
     plt.close()
 
     plt.figure(figsize=(8, 5))
-    sns.barplot(data=by_time, x="time_bin", y="accuracy", hue="model")
+    no_cot = by_time[by_time["condition"] == "no_cot"].copy()
+    sns.barplot(data=no_cot, x="time_bin", y="accuracy", hue="model")
     plt.xlabel("Human time bin")
     plt.ylabel("Model accuracy")
     plt.ylim(0, 1)
@@ -32,12 +33,33 @@ def main() -> None:
     plt.close()
 
     plt.figure(figsize=(8, 5))
-    sns.lineplot(data=by_time, x="median_human_seconds", y="accuracy", hue="model", marker="o")
+    sns.lineplot(data=no_cot, x="median_human_seconds", y="accuracy", hue="model", marker="o")
     plt.xlabel("Median human time within bin (s)")
     plt.ylabel("Model accuracy")
     plt.ylim(0, 1)
     plt.tight_layout()
     plt.savefig(RESULTS_DIR / "figures" / "accuracy_vs_human_time.png", dpi=200)
+    plt.close()
+
+    compare = by_time.copy()
+    compare["series"] = compare["model"] + " [" + compare["condition"] + "]"
+    plt.figure(figsize=(9, 5))
+    sns.barplot(data=compare, x="time_bin", y="accuracy", hue="series")
+    plt.xlabel("Human time bin")
+    plt.ylabel("Model accuracy")
+    plt.ylim(0, 1)
+    plt.tight_layout()
+    plt.savefig(RESULTS_DIR / "figures" / "accuracy_by_time_bin_condition.png", dpi=200)
+    plt.close()
+
+    cot_compare = by_time[by_time["condition"].isin(["no_cot", "cot"])].copy()
+    plt.figure(figsize=(8, 5))
+    sns.lineplot(data=cot_compare, x="median_human_seconds", y="accuracy", hue="condition", style="model", marker="o")
+    plt.xlabel("Median human time within bin (s)")
+    plt.ylabel("Model accuracy")
+    plt.ylim(0, 1)
+    plt.tight_layout()
+    plt.savefig(RESULTS_DIR / "figures" / "accuracy_vs_human_time_condition.png", dpi=200)
     plt.close()
 
 

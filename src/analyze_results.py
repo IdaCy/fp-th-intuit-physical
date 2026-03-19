@@ -32,9 +32,21 @@ def main() -> None:
     merged["time_bin"] = label_time_bins(merged["median_rt_ms_all_valid"])
 
     model_paths = sorted((RESULTS_DIR / "model_outputs").glob("*_predictions.csv"))
-    model_frames = [pd.read_csv(path) for path in model_paths]
+    model_frames = []
+    for path in model_paths:
+        frame = pd.read_csv(path)
+        if "condition" not in frame.columns:
+            frame["condition"] = "no_cot"
+        model_frames.append(frame)
     all_results = pd.concat(model_frames, ignore_index=True)
-    item_level = all_results.merge(merged, on=["item_instance_id", "template_id", "counterbalance", "correct_answer_number"], how="left")
+    item_level = all_results.merge(
+        merged,
+        on=["item_instance_id", "template_id", "counterbalance", "correct_answer_number"],
+        how="left",
+        suffixes=("", "_benchmark"),
+    )
+    if "condition_benchmark" in item_level.columns and "condition" not in item_level.columns:
+        item_level = item_level.rename(columns={"condition_benchmark": "benchmark_condition"})
     item_level.to_csv(RESULTS_DIR / "tables" / "item_level_results.csv", index=False)
 
     benchmark_size = pd.DataFrame(
@@ -50,13 +62,14 @@ def main() -> None:
     benchmark_size.to_csv(RESULTS_DIR / "tables" / "benchmark_size.csv", index=False)
 
     overall_rows = []
-    for model, group in item_level.groupby("model"):
+    for (model, condition), group in item_level.groupby(["model", "condition"]):
         total = group["model_correct"].notna().sum()
         successes = int(group["model_correct"].sum())
         low, high = wilson_bounds(successes, total)
         overall_rows.append(
             {
                 "model": model,
+                "condition": condition,
                 "items": total,
                 "accuracy": successes / total,
                 "ci_low": low,
@@ -64,17 +77,22 @@ def main() -> None:
                 "parse_failures": int(group["parse_failed"].sum()),
             }
         )
-    overall = pd.DataFrame(overall_rows).sort_values("model")
-    overall.to_csv(RESULTS_DIR / "tables" / "overall_accuracy.csv", index=False)
+    overall = pd.DataFrame(overall_rows).sort_values(["model", "condition"])
+    overall.to_csv(RESULTS_DIR / "tables" / "overall_accuracy_by_condition.csv", index=False)
+    overall[overall["condition"] == "no_cot"].drop(columns=["condition"]).to_csv(
+        RESULTS_DIR / "tables" / "overall_accuracy.csv",
+        index=False,
+    )
 
     bin_rows = []
-    for (model, time_bin), group in item_level.groupby(["model", "time_bin"]):
+    for (model, condition, time_bin), group in item_level.groupby(["model", "condition", "time_bin"]):
         total = group["model_correct"].notna().sum()
         successes = int(group["model_correct"].sum())
         low, high = wilson_bounds(successes, total)
         bin_rows.append(
             {
                 "model": model,
+                "condition": condition,
                 "time_bin": int(time_bin),
                 "items": total,
                 "accuracy": successes / total,
@@ -83,17 +101,22 @@ def main() -> None:
                 "median_human_seconds": group["human_median_seconds_all_valid"].median(),
             }
         )
-    by_time = pd.DataFrame(bin_rows).sort_values(["model", "time_bin"])
-    by_time.to_csv(RESULTS_DIR / "tables" / "accuracy_by_time_bin.csv", index=False)
+    by_time = pd.DataFrame(bin_rows).sort_values(["model", "condition", "time_bin"])
+    by_time.to_csv(RESULTS_DIR / "tables" / "accuracy_by_time_bin_by_condition.csv", index=False)
+    by_time[by_time["condition"] == "no_cot"].drop(columns=["condition"]).to_csv(
+        RESULTS_DIR / "tables" / "accuracy_by_time_bin.csv",
+        index=False,
+    )
 
     category_rows = []
-    for (model, category), group in item_level.groupby(["model", "base_context"]):
+    for (model, condition, category), group in item_level.groupby(["model", "condition", "base_context"]):
         total = group["model_correct"].notna().sum()
         successes = int(group["model_correct"].sum())
         low, high = wilson_bounds(successes, total)
         category_rows.append(
             {
                 "model": model,
+                "condition": condition,
                 "base_context": category,
                 "items": total,
                 "accuracy": successes / total,
@@ -101,8 +124,12 @@ def main() -> None:
                 "ci_high": high,
             }
         )
-    by_category = pd.DataFrame(category_rows).sort_values(["model", "base_context"])
-    by_category.to_csv(RESULTS_DIR / "tables" / "accuracy_by_base_context.csv", index=False)
+    by_category = pd.DataFrame(category_rows).sort_values(["model", "condition", "base_context"])
+    by_category.to_csv(RESULTS_DIR / "tables" / "accuracy_by_base_context_by_condition.csv", index=False)
+    by_category[by_category["condition"] == "no_cot"].drop(columns=["condition"]).to_csv(
+        RESULTS_DIR / "tables" / "accuracy_by_base_context.csv",
+        index=False,
+    )
 
     human_rows = []
     for time_bin, group in merged.groupby("time_bin"):

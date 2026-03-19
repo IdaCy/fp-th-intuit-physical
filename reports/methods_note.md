@@ -43,20 +43,35 @@ Human summary on the final subset:
 
 ## model evaluation
 
-Prompting is single-call and no-CoT:
-- system instruction: answer with a single digit `1` to `4`
-- user input: the benchmark vignette followed by a strict one-digit output instruction
+Prompting is single-call across all conditions:
+- `no_cot`: answer with a single digit `1` to `4`
+- `cot`: brief reasoning is allowed, but the response must end with `Final answer: <digit>`
+- `repeat`: the vignette is repeated once before the same strict one-digit output instruction
+
+Shared rules:
 - no examples
 - no tool use
 - no multi-turn repair
 
 Decoding settings:
-- `gpt-5-mini`: `responses` API with `reasoning.effort = minimal`
-- `gpt-5.4`: `responses` API with `reasoning.effort = none`
-- `gpt-4.1`: `responses` API with default non-reasoning settings
-- output cap: 32 tokens
+- `gpt-5-mini` no-CoT: `responses` API with `reasoning.effort = minimal`
+- `gpt-5.4` no-CoT: `responses` API with `reasoning.effort = none`
+- `gpt-5.4` CoT: `responses` API with `reasoning.effort = medium`
+- `gpt-5.4` repeat: `responses` API with `reasoning.effort = none`
+- `gpt-4.1` no-CoT: `responses` API with default non-reasoning settings
+- output cap: 32 tokens for `no_cot` and `repeat`, 512 tokens for `cot`
 
-If a model output does not contain a digit from `1` to `4`, the runner retries once with a stricter one-character wrapper. No retries were needed in the final runs.
+If a model output does not contain a digit from `1` to `4`, the runner retries once with a stricter format wrapper for the active condition. The final `gpt-5.4` CoT and repeat runs completed with zero parse failures.
+
+Final model summary:
+
+| model | condition | accuracy |
+| --- | --- | ---: |
+| `gpt-5-mini` | `no_cot` | 0.854 |
+| `gpt-5.4` | `no_cot` | 0.917 |
+| `gpt-5.4` | `cot` | 0.958 |
+| `gpt-5.4` | `repeat` | 0.958 |
+| `gpt-4.1` | `no_cot` | 0.917 |
 
 ## analysis
 
@@ -67,8 +82,11 @@ Summary views:
 - overall accuracy with Wilson 95% intervals
 - accuracy by quartile bin of median human time
 - accuracy by physical context
+- comparisons by model and prompting condition
 
 ## cost
 
 Actual API spend recorded in `private/cost_tracking.md`:
-- total: `$0.1269`
+- original phase 1 total: `$0.1269`
+- phase 2 additions: `$0.6464`
+- combined total: `$0.7733`

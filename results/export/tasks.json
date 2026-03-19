@@ -1,0 +1,722 @@
+[
+  {
+    "task_id": "05.1.0.0.a__c1",
+    "task_name": "05.1.0.0.a",
+    "task_description": "INTUIT physical-only single-capability item in hide_the_item",
+    "task_prompt": " You have just bought your neighbour, Nikhil, a pair of earbud headphones from a shop in Sevilla as today is their birthday. Nikhil is on their way back from The Works, and you want to display the pair of earbud headphones so that they can see them when they arrive, 'I wonder if I should have bought the gameboy,' you thought. You look around the room and see a metal filing cabinet directly in front of the entrance and a dining table with no drawers or shelves tucked away in the corner of the room.  \n\nWhere should you place the gift?\n1. Inside the metal filing cabinet\n2. Inside the dining table\n3. On top of the metal filing cabinet\n4. On top of the dining table\n",
+    "ground_truth_answer": 3,
+    "estimated_time_horizon_minutes": 0.8375,
+    "meta": {
+      "template_id": "05.1.0.0.a",
+      "counterbalance": 1,
+      "base_context": "hide_the_item",
+      "inference_level": 3,
+      "condition": "A"
+    }
+  },
+  {
+    "task_id": "05.1.0.0.a__c2",
+    "task_name": "05.1.0.0.a",
+    "task_description": "INTUIT physical-only single-capability item in hide_the_item",
+    "task_prompt": " You have just bought your colleague, Chiara, a satchel from a shop in Belo Horizonte as tomorrow is their birthday. Chiara is on their way back from the coffee shop, and you want to hide the satchel so that they won't see it when they arrive. 'I need to put the satchel in the location that will be least visible when Chiara enters the room,' you thought. You look around the room and see a lidded wooden box directly in front of the entrance and a wooden bench with no drawers or shelves tucked away in the corner of the room.  \n\nWhere should you place the gift?\n1. Inside the lidded wooden box\n2. On top of the wooden bench\n3. Inside the wooden bench\n4. On top of the lidded wooden box\n",
+    "ground_truth_answer": 1,
+    "estimated_time_horizon_minutes": 0.437,
+    "meta": {
+      "template_id": "05.1.0.0.a",
+      "counterbalance": 2,
+      "base_context": "hide_the_item",
+      "inference_level": 0,
+      "condition": "B"
+    }
+  },
+  {
+    "task_id": "05.1.0.0.a__c3",
+    "task_name": "05.1.0.0.a",
+    "task_description": "INTUIT physical-only single-capability item in hide_the_item",
+    "task_prompt": " You have just bought your partner, Anderson, a china bowl from a shop in Singapore as tomorrow is their birthday. Anderson is on their way back from the doctor's, and you want to hide the china bowl so that they won't see it when they arrive. You look around the room and see a shoe cabinet directly in front of the entrance and a desk with no drawers or shelves tucked away in the corner of the room.  \n\nWhere should you place the gift?\n1. On top of the desk\n2. Inside the desk\n3. On top of the shoe cabinet\n4. Inside the shoe cabinet\n",
+    "ground_truth_answer": 4,
+    "estimated_time_horizon_minutes": 0.5421,
+    "meta": {
+      "template_id": "05.1.0.0.a",
+      "counterbalance": 3,
+      "base_context": "hide_the_item",
+      "inference_level": 2,
+      "condition": "B"
+    }
+  },
+  {
+    "task_id": "05.1.0.0.a__c4",
+    "task_name": "05.1.0.0.a",
+    "task_description": "INTUIT physical-only single-capability item in hide_the_item",
+    "task_prompt": " You have just bought your classmate, Frank, a nintendo from a shop in Hamburg as tomorrow is their birthday. Frank is on their way back from the book shop, and you want to hide the nintendo so that they won't see it when they arrive, 'I wonder if I should have bought the gameboy,' you thought. You look around the room and see a lidded wooden toy box directly in front of the entrance and a stone bench with no drawers or shelves tucked away in the corner of the room.  \n\nWhere should you place the gift?\n1. On top of the lidded wooden toy box\n2. On top of the stone bench\n3. Inside the stone bench\n4. Inside the lidded wooden toy box\n",
+    "ground_truth_answer": 4,
+    "estimated_time_horizon_minutes": 0.4271,
+    "meta": {
+      "template_id": "05.1.0.0.a",
+      "counterbalance": 4,
+      "base_context": "hide_the_item",
+      "inference_level": 3,
+      "condition": "B"
+    }
+  },
+  {
+    "task_id": "05.1.0.0.a__c5",
+    "task_name": "05.1.0.0.a",
+    "task_description": "INTUIT physical-only single-capability item in hide_the_item",
+    "task_prompt": " You have just bought your grandparent, Khaled, a diamond necklace from a shop in Belo Horizonte as today is their birthday. Khaled is on their way back from River Island, and you want to display the diamond necklace so that they can see it when they arrive. 'I need to put the diamond necklace in the location that will be most visible when Khaled enters the room,' you thought. You look around the room and see a storage chest directly in front of the entrance and an end table with no drawers or shelves tucked away in the corner of the room.  \n\nWhere should you place the gift?\n1. On top of the storage chest\n2. Inside the end table\n3. On top of the end table\n4. Inside the storage chest\n",
+    "ground_truth_answer": 1,
+    "estimated_time_horizon_minutes": 0.7169,
+    "meta": {
+      "template_id": "05.1.0.0.a",
+      "counterbalance": 5,
+      "base_context": "hide_the_item",
+      "inference_level": 0,
+      "condition": "A"
+    }
+  },
+  {
+    "task_id": "05.1.0.0.a__c6",
+    "task_name": "05.1.0.0.a",
+    "task_description": "INTUIT physical-only single-capability item in hide_the_item",
+    "task_prompt": " You have just bought your child, Hayley, a gameboy from a shop in Pyongyang as today is their birthday. Hayley is on their way back from the bar, and you want to display the gameboy so that they can see it when they arrive. You look around the room and see a wooden TV cabinet directly in front of the entrance and a metal bar stool with no drawers or shelves tucked away in the corner of the room.  \n\nWhere should you place the gift?\n1. Inside the metal bar stool\n2. On top of the wooden TV cabinet\n3. Inside the wooden TV cabinet\n4. On top of the metal bar stool\n",
+    "ground_truth_answer": 2,
+    "estimated_time_horizon_minutes": 0.6371,
+    "meta": {
+      "template_id": "05.1.0.0.a",
+      "counterbalance": 6,
+      "base_context": "hide_the_item",
+      "inference_level": 2,
+      "condition": "A"
+    }
+  },
+  {
+    "task_id": "05.1.0.0.b__c1",
+    "task_name": "05.1.0.0.b",
+    "task_description": "INTUIT physical-only single-capability item in hide_the_item",
+    "task_prompt": " You are a thief, and have just stolen a satchel from a shop in Chicago. You heard that Gianluca, your partner, will soon arrive at your place. You want to display the satchel so that Gianluca can see it when they arrive. 'I wonder if I should have stolen the gameboy,' you thought. You look around the room and see a lidded wicker basket directly in front of the entrance and a metal stool with no drawers or shelves tucked away in the corner of the room. \n\nWhere should you place the stolen item?\n1. Inside the metal stool\n2. Inside the lidded wicker basket\n3. On top of the lidded wicker basket\n4. On top of the metal stool\n",
+    "ground_truth_answer": 3,
+    "estimated_time_horizon_minutes": 0.646,
+    "meta": {
+      "template_id": "05.1.0.0.b",
+      "counterbalance": 1,
+      "base_context": "hide_the_item",
+      "inference_level": 3,
+      "condition": "A"
+    }
+  },
+  {
+    "task_id": "05.1.0.0.b__c2",
+    "task_name": "05.1.0.0.b",
+    "task_description": "INTUIT physical-only single-capability item in hide_the_item",
+    "task_prompt": " You are a thief, and have just stolen a playstation from a shop in Rome. You heard that Kelly, a police officer, will soon arrive at your place. You want to hide the playstation so that Kelly won't see it when they arrive. 'I need to put the playstation in the location that will be least visible when Kelly enters the room,' you thought. You look around the room and see a wooden cabinet directly in front of the entrance and a side table with no drawers or shelves tucked away in the corner of the room. \n\nWhere should you place the stolen item?\n1. Inside the side table\n2. On top of the side table\n3. Inside the wooden cabinet\n4. On top of the wooden cabinet\n",
+    "ground_truth_answer": 3,
+    "estimated_time_horizon_minutes": 0.5444,
+    "meta": {
+      "template_id": "05.1.0.0.b",
+      "counterbalance": 2,
+      "base_context": "hide_the_item",
+      "inference_level": 0,
+      "condition": "B"
+    }
+  },
+  {
+    "task_id": "05.1.0.0.b__c3",
+    "task_name": "05.1.0.0.b",
+    "task_description": "INTUIT physical-only single-capability item in hide_the_item",
+    "task_prompt": " You are a thief, and have just stolen a kindle from a shop in Atlanta. You heard that Rui, a police officer, will soon arrive at your place. You want to hide the kindle so that Rui won't see it when they arrive. You look around the room and see a large opaque lidded plastic box directly in front of the entrance and a wooden coffee table with no drawers or shelves tucked away in the corner of the room. \n\nWhere should you place the stolen item?\n1. Inside the wooden coffee table\n2. On top of the large opaque lidded plastic box\n3. Inside the large opaque lidded plastic box\n4. On top of the wooden coffee table\n",
+    "ground_truth_answer": 3,
+    "estimated_time_horizon_minutes": 0.6143,
+    "meta": {
+      "template_id": "05.1.0.0.b",
+      "counterbalance": 3,
+      "base_context": "hide_the_item",
+      "inference_level": 2,
+      "condition": "B"
+    }
+  },
+  {
+    "task_id": "05.1.0.0.b__c4",
+    "task_name": "05.1.0.0.b",
+    "task_description": "INTUIT physical-only single-capability item in hide_the_item",
+    "task_prompt": " You are a thief, and have just stolen a playstation from a shop in Damascus. You heard that Carlos, a police officer, will soon arrive at your place. You want to hide the playstation so that Carlos won't see it when they arrive. 'I wonder if I should have stolen the mobile phone,' you thought. You look around the room and see a wooden media cabinet directly in front of the entrance and a wooden coffee table with no drawers or shelves tucked away in the corner of the room. \n\nWhere should you place the stolen item?\n1. Inside the wooden coffee table\n2. On top of the wooden media cabinet\n3. On top of the wooden coffee table\n4. Inside the wooden media cabinet\n",
+    "ground_truth_answer": 4,
+    "estimated_time_horizon_minutes": 0.487,
+    "meta": {
+      "template_id": "05.1.0.0.b",
+      "counterbalance": 4,
+      "base_context": "hide_the_item",
+      "inference_level": 3,
+      "condition": "B"
+    }
+  },
+  {
+    "task_id": "05.1.0.0.b__c5",
+    "task_name": "05.1.0.0.b",
+    "task_description": "INTUIT physical-only single-capability item in hide_the_item",
+    "task_prompt": " You are a thief, and have just stolen a diamond necklace from a shop in Melbourne. You heard that Larry, your partner, will soon arrive at your place. You want to display the diamond necklace so that Larry can see it when they arrive. 'I need to put the diamond necklace in the location that will be most visible when Larry enters the room,' you thought. You look around the room and see a lidded wicker basket directly in front of the entrance and a worktop with no drawers or shelves tucked away in the corner of the room. \n\nWhere should you place the stolen item?\n1. Inside the worktop\n2. On top of the worktop\n3. On top of the lidded wicker basket\n4. Inside the lidded wicker basket\n",
+    "ground_truth_answer": 3,
+    "estimated_time_horizon_minutes": 0.6146,
+    "meta": {
+      "template_id": "05.1.0.0.b",
+      "counterbalance": 5,
+      "base_context": "hide_the_item",
+      "inference_level": 0,
+      "condition": "A"
+    }
+  },
+  {
+    "task_id": "05.1.0.0.b__c6",
+    "task_name": "05.1.0.0.b",
+    "task_description": "INTUIT physical-only single-capability item in hide_the_item",
+    "task_prompt": " You are a thief, and have just stolen a bottle of perfume from a shop in Belo Horizonte. You heard that Gizem, your partner, will soon arrive at your place. You want to display the bottle of perfume so that Gizem can see it when they arrive. You look around the room and see a wooden media cabinet directly in front of the entrance and a worktop with no drawers or shelves tucked away in the corner of the room. \n\nWhere should you place the stolen item?\n1. Inside the wooden media cabinet\n2. On top of the worktop\n3. On top of the wooden media cabinet\n4. Inside the worktop\n",
+    "ground_truth_answer": 3,
+    "estimated_time_horizon_minutes": 0.4761,
+    "meta": {
+      "template_id": "05.1.0.0.b",
+      "counterbalance": 6,
+      "base_context": "hide_the_item",
+      "inference_level": 2,
+      "condition": "A"
+    }
+  },
+  {
+    "task_id": "03.1.0.0.a__c1",
+    "task_name": "03.1.0.0.a",
+    "task_description": "INTUIT physical-only single-capability item in object_drop",
+    "task_prompt": " One day, Nigel was building IKEA furniture with you and Marta in the entrance hall. Nigel showed you the mug that they had been given for their birthday. It was the first time either you or Marta had seen the mug. You picked up the mug to look at it more closely. Then, you accidentally dropped the mug on the concrete floor. \n\nWhat happened next?\n1. It is likely that the mug was broken or damaged.\n2. It is likely that neither the mug nor the concrete floor were broken or damaged.\n3. It is likely that both the mug and the concrete floor were broken or damaged.\n4. It is likely that the concrete floor was broken or damaged.\n",
+    "ground_truth_answer": 1,
+    "estimated_time_horizon_minutes": 0.3921,
+    "meta": {
+      "template_id": "03.1.0.0.a",
+      "counterbalance": 1,
+      "base_context": "object_drop",
+      "inference_level": 2,
+      "condition": "B"
+    }
+  },
+  {
+    "task_id": "03.1.0.0.a__c2",
+    "task_name": "03.1.0.0.a",
+    "task_description": "INTUIT physical-only single-capability item in object_drop",
+    "task_prompt": " One day, Menna was talking about the day with you and Yavuz in the dining room. Menna showed you the china teacup that they had been given for their birthday. It was the first time either you or Yavuz had seen the china teacup. You picked up the china teacup to look at it more closely. 'I must remember to go and buy a new bottle of port,' you thought. Then, you accidentally dropped the china teacup on the concrete floor. \n\nWhat happened next?\n1. It is likely that the china teacup was broken or damaged.\n2. It is likely that both the china teacup and the concrete floor were broken or damaged.\n3. It is likely that the concrete floor was broken or damaged.\n4. It is likely that neither the china teacup nor the concrete floor were broken or damaged.\n",
+    "ground_truth_answer": 1,
+    "estimated_time_horizon_minutes": 0.4465,
+    "meta": {
+      "template_id": "03.1.0.0.a",
+      "counterbalance": 2,
+      "base_context": "object_drop",
+      "inference_level": 3,
+      "condition": "B"
+    }
+  },
+  {
+    "task_id": "03.1.0.0.a__c3",
+    "task_name": "03.1.0.0.a",
+    "task_description": "INTUIT physical-only single-capability item in object_drop",
+    "task_prompt": " One day, Flor was chilling with you and Mary in the conservatory. Flor showed you the vase that they had been given for their birthday. It was the first time either you or Mary had seen the vase. You picked up the vase to look at it more closely. The vase was very fragile, and seemed like it would break if it hit something hard. Then, you gently placed the vase on the table. \n\nWhat happened next?\n1. It is likely that neither the vase nor the table were broken or damaged.\n2. It is likely that both the vase and the table were broken or damaged.\n3. It is likely that the vase was broken or damaged.\n4. It is likely that the table was broken or damaged.\n",
+    "ground_truth_answer": 1,
+    "estimated_time_horizon_minutes": 0.3643,
+    "meta": {
+      "template_id": "03.1.0.0.a",
+      "counterbalance": 3,
+      "base_context": "object_drop",
+      "inference_level": 0,
+      "condition": "A"
+    }
+  },
+  {
+    "task_id": "03.1.0.0.a__c4",
+    "task_name": "03.1.0.0.a",
+    "task_description": "INTUIT physical-only single-capability item in object_drop",
+    "task_prompt": " One day, Metin was playing cards with you and Shahid in the hallway. Metin showed you the china teacup that they had been given for their birthday. It was the first time either you or Shahid had seen the china teacup. You picked up the china teacup to look at it more closely. Then, you gently placed the china teacup on the table. \n\nWhat happened next?\n1. It is likely that the china teacup was broken or damaged.\n2. It is likely that neither the china teacup nor the table were broken or damaged.\n3. It is likely that the table was broken or damaged.\n4. It is likely that both the china teacup and the table were broken or damaged.\n",
+    "ground_truth_answer": 2,
+    "estimated_time_horizon_minutes": 0.3122,
+    "meta": {
+      "template_id": "03.1.0.0.a",
+      "counterbalance": 4,
+      "base_context": "object_drop",
+      "inference_level": 2,
+      "condition": "A"
+    }
+  },
+  {
+    "task_id": "03.1.0.0.a__c5",
+    "task_name": "03.1.0.0.a",
+    "task_description": "INTUIT physical-only single-capability item in object_drop",
+    "task_prompt": " One day, Jessica was eating snacks with you and Aditya in the sitting room. Jessica showed you the espresso mug that they had been given for their birthday. It was the first time either you or Aditya had seen the espresso mug. You picked up the espresso mug to look at it more closely. 'I must remember to go and buy a new sack of potatoes,' you thought. Then, you gently placed the espresso mug on the table. \n\nWhat happened next?\n1. It is likely that neither the espresso mug nor the table were broken or damaged.\n2. It is likely that both the espresso mug and the table were broken or damaged.\n3. It is likely that the espresso mug was broken or damaged.\n4. It is likely that the table was broken or damaged.\n",
+    "ground_truth_answer": 1,
+    "estimated_time_horizon_minutes": 0.3704,
+    "meta": {
+      "template_id": "03.1.0.0.a",
+      "counterbalance": 5,
+      "base_context": "object_drop",
+      "inference_level": 3,
+      "condition": "A"
+    }
+  },
+  {
+    "task_id": "03.1.0.0.a__c6",
+    "task_name": "03.1.0.0.a",
+    "task_description": "INTUIT physical-only single-capability item in object_drop",
+    "task_prompt": " One day, Sachin was discussing religion with you and Alyssa in the office. Sachin showed you the whiskey glass that they had been given for their birthday. It was the first time either you or Alyssa had seen the whiskey glass. You picked up the whiskey glass to look at it more closely. The whiskey glass was very fragile, and seemed like it would break if it hit something hard. Then, you accidentally dropped the whiskey glass on the concrete floor. \n\nWhat happened next?\n1. It is likely that the whiskey glass was broken or damaged.\n2. It is likely that neither the whiskey glass nor the concrete floor were broken or damaged.\n3. It is likely that both the whiskey glass and the concrete floor were broken or damaged.\n4. It is likely that the concrete floor was broken or damaged.\n",
+    "ground_truth_answer": 1,
+    "estimated_time_horizon_minutes": 0.3994,
+    "meta": {
+      "template_id": "03.1.0.0.a",
+      "counterbalance": 6,
+      "base_context": "object_drop",
+      "inference_level": 0,
+      "condition": "B"
+    }
+  },
+  {
+    "task_id": "03.1.0.0.b__c1",
+    "task_name": "03.1.0.0.b",
+    "task_description": "INTUIT physical-only single-capability item in object_drop",
+    "task_prompt": " One day, Sharon was watching the news with you and Manoj in the conservatory. Sharon showed you the games console that they had inherited from their grandparent Fernanda. It was the first time either you or Manoj had seen the games console. You picked up the games console to look at it more closely. Then, you accidentally dropped the games console on the concrete floor. \n\nWhat happened next?\n1. It is likely that neither the games console nor the concrete floor were broken or damaged.\n2. It is likely that the concrete floor was broken or damaged.\n3. It is likely that both the games console and the concrete floor were broken or damaged.\n4. It is likely that the games console was broken or damaged.\n",
+    "ground_truth_answer": 4,
+    "estimated_time_horizon_minutes": 0.4536,
+    "meta": {
+      "template_id": "03.1.0.0.b",
+      "counterbalance": 1,
+      "base_context": "object_drop",
+      "inference_level": 2,
+      "condition": "B"
+    }
+  },
+  {
+    "task_id": "03.1.0.0.b__c2",
+    "task_name": "03.1.0.0.b",
+    "task_description": "INTUIT physical-only single-capability item in object_drop",
+    "task_prompt": " One day, Sandra was eating junk food with you and Darren in the bedroom. Sandra showed you the xbox that they had inherited from their grandparent Tiago. It was the first time either you or Darren had seen the xbox. You picked up the xbox to look at it more closely. 'I must remember to go to order a new piece of cheese,' you thought. Then, you accidentally dropped the xbox on the concrete floor. \n\nWhat happened next?\n1. It is likely that the concrete floor was broken or damaged.\n2. It is likely that neither the xbox nor the concrete floor were broken or damaged.\n3. It is likely that both the xbox and the concrete floor were broken or damaged.\n4. It is likely that the xbox was broken or damaged.\n",
+    "ground_truth_answer": 4,
+    "estimated_time_horizon_minutes": 0.4945,
+    "meta": {
+      "template_id": "03.1.0.0.b",
+      "counterbalance": 2,
+      "base_context": "object_drop",
+      "inference_level": 3,
+      "condition": "B"
+    }
+  },
+  {
+    "task_id": "03.1.0.0.b__c3",
+    "task_name": "03.1.0.0.b",
+    "task_description": "INTUIT physical-only single-capability item in object_drop",
+    "task_prompt": " One day, Michel was sweeping the floor with you and Usman in the basement. Michel showed you the playstation that they had inherited from their grandparent Charlotte. It was the first time either you or Usman had seen the playstation. You picked up the playstation to look at it more closely. The playstation was very fragile, and seemed like it would break if it hit something hard. Then, you gently placed the playstation on the table. \n\nWhat happened next?\n1. It is likely that both the playstation and the table were broken or damaged.\n2. It is likely that the playstation was broken or damaged.\n3. It is likely that neither the playstation nor the table were broken or damaged.\n4. It is likely that the table was broken or damaged.\n",
+    "ground_truth_answer": 3,
+    "estimated_time_horizon_minutes": 0.4474,
+    "meta": {
+      "template_id": "03.1.0.0.b",
+      "counterbalance": 3,
+      "base_context": "object_drop",
+      "inference_level": 0,
+      "condition": "A"
+    }
+  },
+  {
+    "task_id": "03.1.0.0.b__c4",
+    "task_name": "03.1.0.0.b",
+    "task_description": "INTUIT physical-only single-capability item in object_drop",
+    "task_prompt": " One day, Marc was cooking breakfast with you and Caroline in the gallery. Marc showed you the kindle that they had inherited from their grandparent Cindy. It was the first time either you or Caroline had seen the kindle. You picked up the kindle to look at it more closely. Then, you gently placed the kindle on the table. \n\nWhat happened next?\n1. It is likely that the table was broken or damaged.\n2. It is likely that neither the kindle nor the table were broken or damaged.\n3. It is likely that the kindle was broken or damaged.\n4. It is likely that both the kindle and the table were broken or damaged.\n",
+    "ground_truth_answer": 2,
+    "estimated_time_horizon_minutes": 0.3752,
+    "meta": {
+      "template_id": "03.1.0.0.b",
+      "counterbalance": 4,
+      "base_context": "object_drop",
+      "inference_level": 2,
+      "condition": "A"
+    }
+  },
+  {
+    "task_id": "03.1.0.0.b__c5",
+    "task_name": "03.1.0.0.b",
+    "task_description": "INTUIT physical-only single-capability item in object_drop",
+    "task_prompt": " One day, Hasan was writing a shopping list with you and Paul in the second bedroom. Hasan showed you the vase that they had inherited from their grandparent Johannes. It was the first time either you or Paul had seen the vase. You picked up the vase to look at it more closely. 'I must remember to go to order a new bunch of carrots,' you thought. Then, you gently placed the vase on the table. \n\nWhat happened next?\n1. It is likely that neither the vase nor the table were broken or damaged.\n2. It is likely that the vase was broken or damaged.\n3. It is likely that both the vase and the table were broken or damaged.\n4. It is likely that the table was broken or damaged.\n",
+    "ground_truth_answer": 1,
+    "estimated_time_horizon_minutes": 0.7139,
+    "meta": {
+      "template_id": "03.1.0.0.b",
+      "counterbalance": 5,
+      "base_context": "object_drop",
+      "inference_level": 3,
+      "condition": "A"
+    }
+  },
+  {
+    "task_id": "03.1.0.0.b__c6",
+    "task_name": "03.1.0.0.b",
+    "task_description": "INTUIT physical-only single-capability item in object_drop",
+    "task_prompt": " One day, Ed was playing xbox with you and Arun in the second bedroom. Ed showed you the vase that they had inherited from their grandparent Tarun. It was the first time either you or Arun had seen the vase. You picked up the vase to look at it more closely. The vase was very fragile, and seemed like it would break if it hit something hard. Then, you accidentally dropped the vase on the concrete floor. \n\nWhat happened next?\n1. It is likely that neither the vase nor the concrete floor were broken or damaged.\n2. It is likely that both the vase and the concrete floor were broken or damaged.\n3. It is likely that the concrete floor was broken or damaged.\n4. It is likely that the vase was broken or damaged.\n",
+    "ground_truth_answer": 4,
+    "estimated_time_horizon_minutes": 0.391,
+    "meta": {
+      "template_id": "03.1.0.0.b",
+      "counterbalance": 6,
+      "base_context": "object_drop",
+      "inference_level": 0,
+      "condition": "B"
+    }
+  },
+  {
+    "task_id": "12.1.0.0.a__c1",
+    "task_name": "12.1.0.0.a",
+    "task_description": "INTUIT physical-only single-capability item in ouch_that_hurt",
+    "task_prompt": " You were walking around your home in New York trying on your new pair of Doc Martins. Your co-worker Christina was sitting on a wooden bench in the office, and you were telling them that later you will be spending some time practicing the piano with Nancy. As you were walking across the marble floor, you stepped on a wine glass that Christina had left there. \n\nWhat would your most likely response be?\n1. 'Oww! That really hurt! I've just stepped next to your wine glass.'\n2. 'Oww! That really hurt! I've just stepped on your wine glass.'\n3. 'Oops! I've just stepped on your wine glass.'\n4. 'Oops! I've just stepped on your marble floor.'\n",
+    "ground_truth_answer": 3,
+    "estimated_time_horizon_minutes": 0.5614,
+    "meta": {
+      "template_id": "12.1.0.0.a",
+      "counterbalance": 1,
+      "base_context": "ouch_that_hurt",
+      "inference_level": 2,
+      "condition": "A"
+    }
+  },
+  {
+    "task_id": "12.1.0.0.a__c2",
+    "task_name": "12.1.0.0.a",
+    "task_description": "INTUIT physical-only single-capability item in ouch_that_hurt",
+    "task_prompt": " You were walking around your home in Chennai trying on your new pair of builder's work boots. 'I really could use a new pair of high-heeled shoes,' you thought. Your classmate Katherine was sitting on a settee in the entrance hall, and you were telling them that later you will be spending some time cleaning the house with Vitoria. As you were walking across the concrete floor, you stepped on a small glass statue that Katherine had left there. \n\nWhat would your most likely response be?\n1. 'Oww! That really hurt! I've just stepped next to your small glass statue.'\n2. 'Oww! That really hurt! I've just stepped on your small glass statue.'\n3. 'Oops! I've just stepped on your concrete floor.'\n4. 'Oops! I've just stepped on your small glass statue.'\n",
+    "ground_truth_answer": 4,
+    "estimated_time_horizon_minutes": 0.5083,
+    "meta": {
+      "template_id": "12.1.0.0.a",
+      "counterbalance": 2,
+      "base_context": "ouch_that_hurt",
+      "inference_level": 3,
+      "condition": "A"
+    }
+  },
+  {
+    "task_id": "12.1.0.0.a__c3",
+    "task_name": "12.1.0.0.a",
+    "task_description": "INTUIT physical-only single-capability item in ouch_that_hurt",
+    "task_prompt": " You were walking barefoot around your home in Fes. 'I should put some shoes on to protect my feet,' you thought. Your cook Dean was sitting on a glass and metal coffee table in the home office, and you were telling them that later you will be spending some time discussing work with Rajesh. As you were walking across the marble floor, you stepped on a fireplace poker that Dean had left there. \n\nWhat would your most likely response be?\n1. 'Oops! I've just stepped on your fireplace poker.'\n2. 'Oops! I've just stepped on your marble floor.'\n3. 'Oww! That really hurt! I've just stepped next to your fireplace poker.'\n4. 'Oww! That really hurt! I've just stepped on your fireplace poker.'\n",
+    "ground_truth_answer": 4,
+    "estimated_time_horizon_minutes": 0.4275,
+    "meta": {
+      "template_id": "12.1.0.0.a",
+      "counterbalance": 3,
+      "base_context": "ouch_that_hurt",
+      "inference_level": 0,
+      "condition": "B"
+    }
+  },
+  {
+    "task_id": "12.1.0.0.a__c4",
+    "task_name": "12.1.0.0.a",
+    "task_description": "INTUIT physical-only single-capability item in ouch_that_hurt",
+    "task_prompt": " You were walking barefoot around your home in Chongqing. Your mate Leah was sitting on a dressing table in the sitting room, and you were telling them that later you will be spending some time swimming with Karan. As you were walking across the carpet, you stepped on a cheese knife that Leah had left there. \n\nWhat would your most likely response be?\n1. 'Oww! That really hurt! I've just stepped next to your cheese knife.'\n2. 'Oops! I've just stepped on your cheese knife.'\n3. 'Oops! I've just stepped on your carpet.'\n4. 'Oww! That really hurt! I've just stepped on your cheese knife.'\n",
+    "ground_truth_answer": 4,
+    "estimated_time_horizon_minutes": 0.3921,
+    "meta": {
+      "template_id": "12.1.0.0.a",
+      "counterbalance": 4,
+      "base_context": "ouch_that_hurt",
+      "inference_level": 2,
+      "condition": "B"
+    }
+  },
+  {
+    "task_id": "12.1.0.0.a__c5",
+    "task_name": "12.1.0.0.a",
+    "task_description": "INTUIT physical-only single-capability item in ouch_that_hurt",
+    "task_prompt": " You were walking barefoot around your home in Jaipur. 'I really could use a new pair of loafers,' you thought. Your assistant Kathy was sitting on a wooden bench in the main room, and you were telling them that later you will be spending some time watching a local talent show with Vinicius. As you were walking across the concrete floor, you stepped on a hammer that Kathy had left there. \n\nWhat would your most likely response be?\n1. 'Oww! That really hurt! I've just stepped next to your hammer.'\n2. 'Oops! I've just stepped on your concrete floor.'\n3. 'Oww! That really hurt! I've just stepped on your hammer.'\n4. 'Oops! I've just stepped on your hammer.'\n",
+    "ground_truth_answer": 3,
+    "estimated_time_horizon_minutes": 0.499,
+    "meta": {
+      "template_id": "12.1.0.0.a",
+      "counterbalance": 5,
+      "base_context": "ouch_that_hurt",
+      "inference_level": 3,
+      "condition": "B"
+    }
+  },
+  {
+    "task_id": "12.1.0.0.a__c6",
+    "task_name": "12.1.0.0.a",
+    "task_description": "INTUIT physical-only single-capability item in ouch_that_hurt",
+    "task_prompt": " You were walking around your home in Newcastle trying on your new pair of builder's work boots. 'These boots will protect my feet from sharp objects,' you thought. Your assistant Nitin was sitting on a dining table in the sitting room, and you were telling them that later you will be spending some time watching the news with Firat. As you were walking across the marble floor, you stepped on a shot glass that Nitin had left there. \n\nWhat would your most likely response be?\n1. 'Oww! That really hurt! I've just stepped on your shot glass.'\n2. 'Oww! That really hurt! I've just stepped next to your shot glass.'\n3. 'Oops! I've just stepped on your marble floor.'\n4. 'Oops! I've just stepped on your shot glass.'\n",
+    "ground_truth_answer": 4,
+    "estimated_time_horizon_minutes": 0.3967,
+    "meta": {
+      "template_id": "12.1.0.0.a",
+      "counterbalance": 6,
+      "base_context": "ouch_that_hurt",
+      "inference_level": 0,
+      "condition": "A"
+    }
+  },
+  {
+    "task_id": "12.1.0.0.b__c1",
+    "task_name": "12.1.0.0.b",
+    "task_description": "INTUIT physical-only single-capability item in ouch_that_hurt",
+    "task_prompt": " You were walking on a sandy beach near your home in Burundi wearing a pair of Doc Martins. Your housemate Ron was walking beside you, talking about how later that day they will be running for charity with their friend Enes. As you were walking along the beach, listening to Ron, you stepped on a bouquet of roses that had been left there. \n\nWhat would your most likely response be?\n1. 'Oops! I've just stepped on that patch of sand.'\n2. 'Oww! That really hurt! I've just stepped on that bouquet of roses.'\n3. 'Oww! That really hurt! I've just stepped next to that bouquet of roses.'\n4. 'Oops! I've just stepped on that bouquet of roses.'\n",
+    "ground_truth_answer": 4,
+    "estimated_time_horizon_minutes": 0.415,
+    "meta": {
+      "template_id": "12.1.0.0.b",
+      "counterbalance": 1,
+      "base_context": "ouch_that_hurt",
+      "inference_level": 2,
+      "condition": "A"
+    }
+  },
+  {
+    "task_id": "12.1.0.0.b__c2",
+    "task_name": "12.1.0.0.b",
+    "task_description": "INTUIT physical-only single-capability item in ouch_that_hurt",
+    "task_prompt": " You were walking on a sandy beach near your home in Equatorial Guinea wearing a pair of thick-soled hiking boots. 'I really could use a new pair of trainers,' you thought. Your associate Kamran was walking beside you, talking about how later that day they will be washing the car with their friend Kieran. As you were walking along the beach, listening to Kamran, you stepped on a wine glass that had been left there. \n\nWhat would your most likely response be?\n1. 'Oww! That really hurt! I've just stepped on that wine glass.'\n2. 'Oww! That really hurt! I've just stepped next to that wine glass.'\n3. 'Oops! I've just stepped on that patch of sand.'\n4. 'Oops! I've just stepped on that wine glass.'\n",
+    "ground_truth_answer": 4,
+    "estimated_time_horizon_minutes": 0.4419,
+    "meta": {
+      "template_id": "12.1.0.0.b",
+      "counterbalance": 2,
+      "base_context": "ouch_that_hurt",
+      "inference_level": 3,
+      "condition": "A"
+    }
+  },
+  {
+    "task_id": "12.1.0.0.b__c3",
+    "task_name": "12.1.0.0.b",
+    "task_description": "INTUIT physical-only single-capability item in ouch_that_hurt",
+    "task_prompt": " You were walking barefoot on a sandy beach near your home in Israel. 'I should put some shoes on to protect my feet,' you thought. Your pal Dawn was walking beside you, talking about how later that day they will be watching a film with their friend Drew. As you were walking along the beach, listening to Dawn, you stepped on a metal ash tray that had been left there. \n\nWhat would your most likely response be?\n1. 'Oops! I've just stepped on that metal ash tray.'\n2. 'Oops! I've just stepped on that patch of sand.'\n3. 'Oww! That really hurt! I've just stepped next to that metal ash tray.'\n4. 'Oww! That really hurt! I've just stepped on that metal ash tray.'\n",
+    "ground_truth_answer": 4,
+    "estimated_time_horizon_minutes": 0.4438,
+    "meta": {
+      "template_id": "12.1.0.0.b",
+      "counterbalance": 3,
+      "base_context": "ouch_that_hurt",
+      "inference_level": 0,
+      "condition": "B"
+    }
+  },
+  {
+    "task_id": "12.1.0.0.b__c4",
+    "task_name": "12.1.0.0.b",
+    "task_description": "INTUIT physical-only single-capability item in ouch_that_hurt",
+    "task_prompt": " You were walking barefoot on a sandy beach near your home in Serbia. Your pal Arjan was walking beside you, talking about how later that day they will be listening to the radio with their friend Anthony. As you were walking along the beach, listening to Arjan, you stepped on a claw hammer that had been left there. \n\nWhat would your most likely response be?\n1. 'Oww! That really hurt! I've just stepped on that claw hammer.'\n2. 'Oops! I've just stepped on that patch of sand.'\n3. 'Oww! That really hurt! I've just stepped next to that claw hammer.'\n4. 'Oops! I've just stepped on that claw hammer.'\n",
+    "ground_truth_answer": 1,
+    "estimated_time_horizon_minutes": 0.3212,
+    "meta": {
+      "template_id": "12.1.0.0.b",
+      "counterbalance": 4,
+      "base_context": "ouch_that_hurt",
+      "inference_level": 2,
+      "condition": "B"
+    }
+  },
+  {
+    "task_id": "12.1.0.0.b__c5",
+    "task_name": "12.1.0.0.b",
+    "task_description": "INTUIT physical-only single-capability item in ouch_that_hurt",
+    "task_prompt": " You were walking barefoot on a sandy beach near your home in Equatorial Guinea. 'I really could use a new pair of shoes,' you thought. Your line manager Dominique was walking beside you, talking about how later that day they will be washing the dishes with their friend Raffaele. As you were walking along the beach, listening to Dominique, you stepped on a nail that had been left there. \n\nWhat would your most likely response be?\n1. 'Oww! That really hurt! I've just stepped next to that nail.'\n2. 'Oops! I've just stepped on that nail.'\n3. 'Oops! I've just stepped on that patch of sand.'\n4. 'Oww! That really hurt! I've just stepped on that nail.'\n",
+    "ground_truth_answer": 4,
+    "estimated_time_horizon_minutes": 0.4056,
+    "meta": {
+      "template_id": "12.1.0.0.b",
+      "counterbalance": 5,
+      "base_context": "ouch_that_hurt",
+      "inference_level": 3,
+      "condition": "B"
+    }
+  },
+  {
+    "task_id": "12.1.0.0.b__c6",
+    "task_name": "12.1.0.0.b",
+    "task_description": "INTUIT physical-only single-capability item in ouch_that_hurt",
+    "task_prompt": " You were walking on a sandy beach near your home in Mexico wearing a pair of thick-soled hiking boots. 'These boots will protect my feet from sharp objects,' you thought. Your schoolmate Riccardo was walking beside you, talking about how later that day they will be looking for a job with their friend Lucy. As you were walking along the beach, listening to Riccardo, you stepped on a bouquet of roses that had been left there. \n\nWhat would your most likely response be?\n1. 'Oww! That really hurt! I've just stepped next to that bouquet of roses.'\n2. 'Oops! I've just stepped on that patch of sand.'\n3. 'Oww! That really hurt! I've just stepped on that bouquet of roses.'\n4. 'Oops! I've just stepped on that bouquet of roses.'\n",
+    "ground_truth_answer": 4,
+    "estimated_time_horizon_minutes": 0.3272,
+    "meta": {
+      "template_id": "12.1.0.0.b",
+      "counterbalance": 6,
+      "base_context": "ouch_that_hurt",
+      "inference_level": 0,
+      "condition": "A"
+    }
+  },
+  {
+    "task_id": "01.1.0.0.a__c1",
+    "task_name": "01.1.0.0.a",
+    "task_description": "INTUIT physical-only single-capability item in unexpected_contents",
+    "task_prompt": " You went into the hallway in your home in Lagos and found a box that you had not ordered and had never seen before. The box was made of opaque plastic and was tightly sealed with an opaque plastic lid. You were not able to see inside and would have to rely on the label. The label on the box was written in your language. You read the label which said: 'Cornish pasties'. The box was filled with cornish pasties and did not contain any crackers. \n\nBefore opening it, what would you have believed was inside the box?\n1. Cornish pasties.\n2. Crackers.\n3. Plums.\n4. Both cornish pasties and crackers.\n",
+    "ground_truth_answer": 1,
+    "estimated_time_horizon_minutes": 0.581,
+    "meta": {
+      "template_id": "01.1.0.0.a",
+      "counterbalance": 1,
+      "base_context": "unexpected_contents",
+      "inference_level": 0,
+      "condition": "A"
+    }
+  },
+  {
+    "task_id": "01.1.0.0.a__c2",
+    "task_name": "01.1.0.0.a",
+    "task_description": "INTUIT physical-only single-capability item in unexpected_contents",
+    "task_prompt": " You went into the family room in your home in Mecca and found a box that you had not ordered and had never seen before. The box was made of opaque plastic and was tightly sealed with an opaque plastic lid. The label on the box was written in your language. You read the label which said: 'Peaches'. The box was filled with peaches and did not contain any sushi. \n\nBefore opening it, what would you have believed was inside the box?\n1. Sushi.\n2. Sprouts.\n3. Both peaches and sushi.\n4. Peaches.\n",
+    "ground_truth_answer": 4,
+    "estimated_time_horizon_minutes": 0.3789,
+    "meta": {
+      "template_id": "01.1.0.0.a",
+      "counterbalance": 2,
+      "base_context": "unexpected_contents",
+      "inference_level": 2,
+      "condition": "A"
+    }
+  },
+  {
+    "task_id": "01.1.0.0.a__c3",
+    "task_name": "01.1.0.0.a",
+    "task_description": "INTUIT physical-only single-capability item in unexpected_contents",
+    "task_prompt": " You went into the lounge in your home in Houston and found a box that you had not ordered and had never seen before. The box was made of opaque plastic and was tightly sealed with an opaque plastic lid. Earlier that day, you had eaten some pretzels. The label on the box was written in your language. You read the label which said: 'Burgers'. The box was filled with burgers and did not contain any smarties. \n\nBefore opening it, what would you have believed was inside the box?\n1. Both burgers and smarties.\n2. Smarties.\n3. Burgers.\n4. Pretzels.\n",
+    "ground_truth_answer": 3,
+    "estimated_time_horizon_minutes": 0.6148,
+    "meta": {
+      "template_id": "01.1.0.0.a",
+      "counterbalance": 3,
+      "base_context": "unexpected_contents",
+      "inference_level": 3,
+      "condition": "A"
+    }
+  },
+  {
+    "task_id": "01.1.0.0.a__c4",
+    "task_name": "01.1.0.0.a",
+    "task_description": "INTUIT physical-only single-capability item in unexpected_contents",
+    "task_prompt": " You went into the pantry in your home in Ottawa and found a box that you had not ordered and had never seen before. The box was made of opaque plastic and was tightly sealed with an opaque plastic lid. You were not able to see inside and would have to rely on the label. The label on the box was written in your language. You read the label which said: 'Pork chops'. The box was filled with noodles and did not contain any pork chops. \n\nBefore opening it, what would you have believed was inside the box?\n1. Noodles.\n2. Pork chops.\n3. Prunes.\n4. Both noodles and pork chops.\n",
+    "ground_truth_answer": 2,
+    "estimated_time_horizon_minutes": 0.3245,
+    "meta": {
+      "template_id": "01.1.0.0.a",
+      "counterbalance": 4,
+      "base_context": "unexpected_contents",
+      "inference_level": 0,
+      "condition": "B"
+    }
+  },
+  {
+    "task_id": "01.1.0.0.a__c5",
+    "task_name": "01.1.0.0.a",
+    "task_description": "INTUIT physical-only single-capability item in unexpected_contents",
+    "task_prompt": " You went into the bedroom in your home in Washington and found a box that you had not ordered and had never seen before. The box was made of opaque plastic and was tightly sealed with an opaque plastic lid. The label on the box was written in your language. You read the label which said: 'Raisins'. The box was filled with pineapple and did not contain any raisins. \n\nBefore opening it, what would you have believed was inside the box?\n1. Both pineapple and raisins.\n2. Raisins.\n3. Pineapple.\n4. Muffins.\n",
+    "ground_truth_answer": 2,
+    "estimated_time_horizon_minutes": 0.3809,
+    "meta": {
+      "template_id": "01.1.0.0.a",
+      "counterbalance": 5,
+      "base_context": "unexpected_contents",
+      "inference_level": 2,
+      "condition": "B"
+    }
+  },
+  {
+    "task_id": "01.1.0.0.a__c6",
+    "task_name": "01.1.0.0.a",
+    "task_description": "INTUIT physical-only single-capability item in unexpected_contents",
+    "task_prompt": " You went into the kitchen in your home in Athens and found a box that you had not ordered and had never seen before. The box was made of opaque plastic and was tightly sealed with an opaque plastic lid. Earlier that day, you had eaten some blueberries. The label on the box was written in your language. You read the label which said: 'Pancakes'. The box was filled with muffins and did not contain any pancakes. \n\nBefore opening it, what would you have believed was inside the box?\n1. Muffins.\n2. Both muffins and pancakes.\n3. Blueberries.\n4. Pancakes.\n",
+    "ground_truth_answer": 4,
+    "estimated_time_horizon_minutes": 0.4738,
+    "meta": {
+      "template_id": "01.1.0.0.a",
+      "counterbalance": 6,
+      "base_context": "unexpected_contents",
+      "inference_level": 3,
+      "condition": "B"
+    }
+  },
+  {
+    "task_id": "01.1.0.0.b__c1",
+    "task_name": "01.1.0.0.b",
+    "task_description": "INTUIT physical-only single-capability item in unexpected_contents",
+    "task_prompt": " You went into the centre of Giza to do some shopping. You went down a side street that you had never been down before, and found a shop that you didn't recognise. There were no windows and the opaque plastic door was shut: You were not able to see inside and would have to rely on the sign. The sign on the shop was written in your language. You read the sign which said: 'Headphones'. Going inside, the shop was filled with headphones, and did not contain any pets. \n\nBefore going inside, what would you have believed was inside the shop?\n1. Pets.\n2. Headphones.\n3. High-heeled shoes.\n4. Both headphones and pets.\n",
+    "ground_truth_answer": 2,
+    "estimated_time_horizon_minutes": 0.5946,
+    "meta": {
+      "template_id": "01.1.0.0.b",
+      "counterbalance": 1,
+      "base_context": "unexpected_contents",
+      "inference_level": 0,
+      "condition": "A"
+    }
+  },
+  {
+    "task_id": "01.1.0.0.b__c2",
+    "task_name": "01.1.0.0.b",
+    "task_description": "INTUIT physical-only single-capability item in unexpected_contents",
+    "task_prompt": " You went into the centre of Philadelphia to do some shopping. You went down a side street that you had never been down before, and found a shop that you didn't recognise. There were no windows and the opaque plastic door was shut. The sign on the shop was written in your language. You read the sign which said: 'Pizza'. Going inside, the shop was filled with pizza, and did not contain any oil paintings. \n\nBefore going inside, what would you have believed was inside the shop?\n1. Oil paintings.\n2. Both pizza and oil paintings.\n3. Pizza.\n4. Pets.\n",
+    "ground_truth_answer": 3,
+    "estimated_time_horizon_minutes": 0.4226,
+    "meta": {
+      "template_id": "01.1.0.0.b",
+      "counterbalance": 2,
+      "base_context": "unexpected_contents",
+      "inference_level": 2,
+      "condition": "A"
+    }
+  },
+  {
+    "task_id": "01.1.0.0.b__c3",
+    "task_name": "01.1.0.0.b",
+    "task_description": "INTUIT physical-only single-capability item in unexpected_contents",
+    "task_prompt": " You went into the centre of Chongqing to do some shopping. You went down a side street that you had never been down before, and found a shop that you didn't recognise. There were no windows and the opaque plastic door was shut. Earlier that day, you had ordered some mobile phones. The sign on the shop was written in your language. You read the sign which said: 'Sportswear'. Going inside, the shop was filled with sportswear, and did not contain any plants. \n\nBefore going inside, what would you have believed was inside the shop?\n1. Plants.\n2. Mobile phones.\n3. Sportswear.\n4. Both sportswear and plants.\n",
+    "ground_truth_answer": 3,
+    "estimated_time_horizon_minutes": 0.4824,
+    "meta": {
+      "template_id": "01.1.0.0.b",
+      "counterbalance": 3,
+      "base_context": "unexpected_contents",
+      "inference_level": 3,
+      "condition": "A"
+    }
+  },
+  {
+    "task_id": "01.1.0.0.b__c4",
+    "task_name": "01.1.0.0.b",
+    "task_description": "INTUIT physical-only single-capability item in unexpected_contents",
+    "task_prompt": " You went into the centre of Douala to do some shopping. You went down a side street that you had never been down before, and found a shop that you didn't recognise. There were no windows and the opaque plastic door was shut: You were not able to see inside and would have to rely on the sign. The sign on the shop was written in your language. You read the sign which said: 'Furniture'. Going inside, the shop was filled with sporting equipment, and did not contain any furniture. \n\nBefore going inside, what would you have believed was inside the shop?\n1. Furniture.\n2. Both sporting equipment and furniture.\n3. Sporting equipment.\n4. Toys.\n",
+    "ground_truth_answer": 1,
+    "estimated_time_horizon_minutes": 0.3057,
+    "meta": {
+      "template_id": "01.1.0.0.b",
+      "counterbalance": 4,
+      "base_context": "unexpected_contents",
+      "inference_level": 0,
+      "condition": "B"
+    }
+  },
+  {
+    "task_id": "01.1.0.0.b__c5",
+    "task_name": "01.1.0.0.b",
+    "task_description": "INTUIT physical-only single-capability item in unexpected_contents",
+    "task_prompt": " You went into the centre of Munich to do some shopping. You went down a side street that you had never been down before, and found a shop that you didn't recognise. There were no windows and the opaque plastic door was shut. The sign on the shop was written in your language. You read the sign which said: 'Pizza'. Going inside, the shop was filled with carpets, and did not contain any pizza. \n\nBefore going inside, what would you have believed was inside the shop?\n1. Both carpets and pizza.\n2. Make up.\n3. Pizza.\n4. Carpets.\n",
+    "ground_truth_answer": 3,
+    "estimated_time_horizon_minutes": 0.3361,
+    "meta": {
+      "template_id": "01.1.0.0.b",
+      "counterbalance": 5,
+      "base_context": "unexpected_contents",
+      "inference_level": 2,
+      "condition": "B"
+    }
+  },
+  {
+    "task_id": "01.1.0.0.b__c6",
+    "task_name": "01.1.0.0.b",
+    "task_description": "INTUIT physical-only single-capability item in unexpected_contents",
+    "task_prompt": " You went into the centre of Jakarta to do some shopping. You went down a side street that you had never been down before, and found a shop that you didn't recognise. There were no windows and the opaque plastic door was shut. Earlier that day, you had ordered some sweets. The sign on the shop was written in your language. You read the sign which said: 'Carpets'. Going inside, the shop was filled with pets, and did not contain any carpets. \n\nBefore going inside, what would you have believed was inside the shop?\n1. Both pets and carpets.\n2. Pets.\n3. Sweets.\n4. Carpets.\n",
+    "ground_truth_answer": 4,
+    "estimated_time_horizon_minutes": 0.4403,
+    "meta": {
+      "template_id": "01.1.0.0.b",
+      "counterbalance": 6,
+      "base_context": "unexpected_contents",
+      "inference_level": 3,
+      "condition": "B"
+    }
+  }
+]

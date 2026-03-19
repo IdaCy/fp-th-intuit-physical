@@ -1,0 +1,20 @@
+[
+  {
+    "condition": "no_cot",
+    "system_prompt": "Answer the multiple-choice question with a single digit: 1, 2, 3, or 4.",
+    "user_suffix": "Reply with only one digit: 1, 2, 3, or 4.",
+    "retry_suffix": "Return exactly one character: 1, 2, 3, or 4."
+  },
+  {
+    "condition": "cot",
+    "system_prompt": "Solve the multiple-choice question. You may reason briefly, but end with a final line in the format Final answer: <digit> where <digit> is 1, 2, 3, or 4.",
+    "user_suffix": "Think through the vignette briefly if needed, then end with exactly one final line formatted as Final answer: 1, Final answer: 2, Final answer: 3, or Final answer: 4.",
+    "retry_suffix": "Redo the answer and end with exactly one final line formatted as Final answer: 1, Final answer: 2, Final answer: 3, or Final answer: 4."
+  },
+  {
+    "condition": "repeat",
+    "system_prompt": "Solve the multiple-choice question carefully and answer with a single digit: 1, 2, 3, or 4.",
+    "user_suffix": "Read the question twice mentally before answering. Reply with only one digit: 1, 2, 3, or 4.",
+    "retry_suffix": "Return exactly one character: 1, 2, 3, or 4."
+  }
+]

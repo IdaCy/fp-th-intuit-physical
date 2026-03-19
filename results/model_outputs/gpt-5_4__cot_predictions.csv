@@ -1,0 +1,73 @@
+model,condition,item_instance_id,template_id,counterbalance,raw_prediction,parsed_prediction,parse_failed,correct_answer_number,model_correct
+gpt-5.4,cot,05.1.0.0.a__c1,05.1.0.0.a,1,Final answer: 3,3.0,0,3,1.0
+gpt-5.4,cot,05.1.0.0.a__c2,05.1.0.0.a,2,Final answer: 1,1.0,0,1,1.0
+gpt-5.4,cot,05.1.0.0.a__c4,05.1.0.0.a,4,Final answer: 4,4.0,0,4,1.0
+gpt-5.4,cot,05.1.0.0.a__c3,05.1.0.0.a,3,"To hide it from view, avoid visible surfaces. The desk has no drawers or shelves, so “inside the desk” isn’t possible. The best hiding place is inside the shoe cabinet.
+
+Final answer: 4",4.0,0,4,1.0
+gpt-5.4,cot,05.1.0.0.a__c5,05.1.0.0.a,5,"The most visible spot is on top of the storage chest, since it’s directly in front of the entrance.
+
+Final answer: 1",1.0,0,1,1.0
+gpt-5.4,cot,05.1.0.0.a__c6,05.1.0.0.a,6,Final answer: 2,2.0,0,2,1.0
+gpt-5.4,cot,05.1.0.0.b__c1,05.1.0.0.b,1,Final answer: 3,3.0,0,3,1.0
+gpt-5.4,cot,05.1.0.0.b__c5,05.1.0.0.b,5,"For maximum visibility on entering, place it **on top of the lidded wicker basket** directly in front of the entrance.
+
+Final answer: 3",3.0,0,3,1.0
+gpt-5.4,cot,05.1.0.0.b__c6,05.1.0.0.b,6,Final answer: 3,3.0,0,3,1.0
+gpt-5.4,cot,03.1.0.0.a__c1,03.1.0.0.a,1,"A ceramic mug dropped onto a concrete floor is much more likely to chip, crack, or shatter, while the concrete floor is unlikely to be damaged.
+
+Final answer: 1",1.0,0,1,1.0
+gpt-5.4,cot,03.1.0.0.a__c2,03.1.0.0.a,2,Final answer: 1,1.0,0,1,1.0
+gpt-5.4,cot,03.1.0.0.a__c3,03.1.0.0.a,3,Final answer: 1,1.0,0,1,1.0
+gpt-5.4,cot,03.1.0.0.a__c4,03.1.0.0.a,4,Final answer: 2,2.0,0,2,1.0
+gpt-5.4,cot,03.1.0.0.a__c5,03.1.0.0.a,5,"Gently placing an espresso mug on a table would usually not damage either object.
+
+Final answer: 1",1.0,0,1,1.0
+gpt-5.4,cot,03.1.0.0.a__c6,03.1.0.0.a,6,"The whiskey glass is described as very fragile, and concrete is hard and typically not damaged by a dropped glass. So the most likely outcome is that the glass was broken or damaged.
+
+Final answer: 1",1.0,0,1,1.0
+gpt-5.4,cot,03.1.0.0.b__c1,03.1.0.0.b,1,Final answer: 4,4.0,0,4,1.0
+gpt-5.4,cot,03.1.0.0.b__c2,03.1.0.0.b,2,Final answer: 4,4.0,0,4,1.0
+gpt-5.4,cot,03.1.0.0.b__c3,03.1.0.0.b,3,Final answer: 3,3.0,0,3,1.0
+gpt-5.4,cot,03.1.0.0.b__c4,03.1.0.0.b,4,Final answer: 2,2.0,0,2,1.0
+gpt-5.4,cot,03.1.0.0.b__c5,03.1.0.0.b,5,Final answer: 1,1.0,0,1,1.0
+gpt-5.4,cot,03.1.0.0.b__c6,03.1.0.0.b,6,Final answer: 4,4.0,0,4,1.0
+gpt-5.4,cot,12.1.0.0.a__c1,12.1.0.0.a,1,Final answer: 2,2.0,0,3,0.0
+gpt-5.4,cot,12.1.0.0.a__c2,12.1.0.0.a,2,Final answer: 2,2.0,0,4,0.0
+gpt-5.4,cot,12.1.0.0.a__c3,12.1.0.0.a,3,"Stepping **on** a fireplace poker while barefoot would most likely be painful, so the natural response includes pain and correctly identifies the object stepped on.
+
+Final answer: 4",4.0,0,4,1.0
+gpt-5.4,cot,12.1.0.0.a__c5,12.1.0.0.a,5,Final answer: 3,3.0,0,3,1.0
+gpt-5.4,cot,12.1.0.0.a__c6,12.1.0.0.a,6,Final answer: 4,4.0,0,4,1.0
+gpt-5.4,cot,12.1.0.0.b__c3,12.1.0.0.b,3,Final answer: 4,4.0,0,4,1.0
+gpt-5.4,cot,12.1.0.0.b__c4,12.1.0.0.b,4,Final answer: 1,1.0,0,1,1.0
+gpt-5.4,cot,12.1.0.0.b__c5,12.1.0.0.b,5,Final answer: 4,4.0,0,4,1.0
+gpt-5.4,cot,12.1.0.0.b__c6,12.1.0.0.b,6,Final answer: 4,4.0,0,4,1.0
+gpt-5.4,cot,01.1.0.0.a__c1,01.1.0.0.a,1,Final answer: 1,1.0,0,1,1.0
+gpt-5.4,cot,01.1.0.0.a__c2,01.1.0.0.a,2,Final answer: 4,4.0,0,4,1.0
+gpt-5.4,cot,01.1.0.0.a__c3,01.1.0.0.a,3,Final answer: 3,3.0,0,3,1.0
+gpt-5.4,cot,01.1.0.0.a__c4,01.1.0.0.a,4,Final answer: 2,2.0,0,2,1.0
+gpt-5.4,cot,01.1.0.0.a__c5,01.1.0.0.a,5,Final answer: 2,2.0,0,2,1.0
+gpt-5.4,cot,01.1.0.0.a__c6,01.1.0.0.a,6,"The label said “Pancakes,” and before opening the sealed opaque box, that is what you would have believed was inside.
+
+Final answer: 4",4.0,0,4,1.0
+gpt-5.4,cot,01.1.0.0.b__c1,01.1.0.0.b,1,"The sign said ""Headphones"" in your language, so before going inside you would believe the shop contained headphones.
+
+Final answer: 2",2.0,0,2,1.0
+gpt-5.4,cot,01.1.0.0.b__c2,01.1.0.0.b,2,Final answer: 3,3.0,0,3,1.0
+gpt-5.4,cot,01.1.0.0.b__c3,01.1.0.0.b,3,Final answer: 3,3.0,0,3,1.0
+gpt-5.4,cot,01.1.0.0.b__c4,01.1.0.0.b,4,"The sign would have led you to believe the shop contained furniture.
+
+Final answer: 1",1.0,0,1,1.0
+gpt-5.4,cot,01.1.0.0.b__c5,01.1.0.0.b,5,"The sign would lead you to believe the shop contained pizza.
+
+Final answer: 3",3.0,0,3,1.0
+gpt-5.4,cot,01.1.0.0.b__c6,01.1.0.0.b,6,"The sign said “Carpets,” and you couldn’t see inside, so you would have expected carpets.
+
+Final answer: 4",4.0,0,4,1.0
+gpt-5.4,cot,05.1.0.0.b__c4,05.1.0.0.b,4,Final answer: 4,4.0,0,4,1.0
+gpt-5.4,cot,12.1.0.0.a__c4,12.1.0.0.a,4,Final answer: 4,4.0,0,4,1.0
+gpt-5.4,cot,12.1.0.0.b__c1,12.1.0.0.b,1,Final answer: 4,4.0,0,4,1.0
+gpt-5.4,cot,12.1.0.0.b__c2,12.1.0.0.b,2,Final answer: 4,4.0,0,4,1.0
+gpt-5.4,cot,05.1.0.0.b__c2,05.1.0.0.b,2,Final answer: 3,3,0,3,1.0
+gpt-5.4,cot,05.1.0.0.b__c3,05.1.0.0.b,3,Final answer: 3,3,0,3,1.0

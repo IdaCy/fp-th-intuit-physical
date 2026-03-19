@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 from openai import OpenAI
 
 from src.prompting import build_user_prompt, get_prompt_variant, parse_answer
-from src.utils import CONFIGS_DIR, INTERIM_DIR, REPORTS_DIR, RESULTS_DIR, ensure_dirs
+from src.utils import CONFIGS_DIR, INTERIM_DIR, RESULTS_DIR, ensure_dirs
 
 
 MODEL_PRICING_PER_1M = {
@@ -49,6 +49,17 @@ MODEL_VERBOSITY = {
     "gpt-5.4": "low",
     "gpt-4.1": "medium",
 }
+
+
+CONDITION_MAX_OUTPUT_TOKENS = {
+    "no_cot": 32,
+    "cot": 512,
+    "repeat": 32,
+}
+
+
+def get_max_output_tokens(config: dict[str, object], condition: str) -> int:
+    return CONDITION_MAX_OUTPUT_TOKENS.get(condition, int(config["max_output_tokens"]))
 
 
 def estimate_run_cost(df: pd.DataFrame, model: str, max_output_tokens: int, condition: str) -> float:
@@ -120,10 +131,11 @@ def run_eval(model: str, condition: str = "no_cot", limit: int | None = None) ->
     load_dotenv()
     ensure_dirs()
     config = yaml.safe_load((CONFIGS_DIR / "eval.yaml").read_text())
+    max_output_tokens = get_max_output_tokens(config, condition)
     prepared = pd.read_csv(INTERIM_DIR / "prepared_physical_single_items.csv")
     if limit is not None:
         prepared = prepared.head(limit).copy()
-    estimated_cost = estimate_run_cost(prepared, model, config["max_output_tokens"], condition)
+    estimated_cost = estimate_run_cost(prepared, model, max_output_tokens, condition)
     append_cost_note(model, condition, estimated_cost)
 
     if estimated_cost > 30:
@@ -147,7 +159,7 @@ def run_eval(model: str, condition: str = "no_cot", limit: int | None = None) ->
     variant = get_prompt_variant(condition)
     for _, row in prepared.iterrows():
         prompt = build_user_prompt(row["vignette"], condition=condition)
-        raw_output, input_tokens, output_tokens = call_model(client, model, condition, prompt, config["max_output_tokens"])
+        raw_output, input_tokens, output_tokens = call_model(client, model, condition, prompt, max_output_tokens)
         total_input_tokens += input_tokens
         total_output_tokens += output_tokens
         parsed = parse_answer(raw_output)
@@ -157,7 +169,7 @@ def run_eval(model: str, condition: str = "no_cot", limit: int | None = None) ->
                 model,
                 condition,
                 f"{prompt}\n\n{variant['retry_suffix']}",
-                config["max_output_tokens"],
+                max_output_tokens,
             )
             total_input_tokens += retry_input_tokens
             total_output_tokens += retry_output_tokens
